@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Toggle text sections visibility
+        let sections = ["#home", "#aboutme", "#skills", "#projects", "#resume"];
+        function showOne(name) {
+            $('a[href="' + name + '"]').click(function(e) {
+                $(sections.join(', ') ).addClass('hidden');
+                $(name).removeClass('hidden');
+                e.preventDefault()
+            });
+        }
+        $(document).ready(function() {
+            $(sections.slice(1).join(', ') ).addClass('hidden');
+            for (section of sections) {
+                showOne(section);
+            }
+        });
+    </script>
+
+    <script>
+        // Toggle navbar highlight
+        $(document).ready(function() {
+        $('nav ul li').click(function() {
+            $('nav ul li').removeClass('selected');
+            $(this).addClass('selected');
+        });
+        });
+    </script>  
+      
+    <title>Your Name</title>
+</head>
+<body>
+    <div class="grid-2">
+        <div class="section-1 flex-column">
+          <div class="top">
+            <i class="fas fa-code fa-5x white"></i>
+            <!-- <img src="dummy.png" alt="Project Image"> -->
+            <h2>Łukasz Faruga</h2>
+            <p>Kraków, Poland.</p>
+            <p></p>
+            <p>lukasz.faruga1@gmail.com</p>
+          </div>
+          <nav class="">
+            <ul>
+              <li class="selected">
+                <small>
+                  <span>00</span>
+                  <a href="#home">
+                    <span class="menu_bullet"></span> HOME
+                  </a>
+                </small>
+              </li>
+              <li class="">
+                <small>
+                  <span>01</span>
+                  <a href="#aboutme">
+                    <span class="menu_bullet"></span> ABOUT ME
+                  </a>
+                </small>
+              </li>
+              <li class=""> 
+                <small>
+                  <span>02</span>
+                  <a aria-current="page" class="" href="#skills">
+                      <span class="menu_bullet"></span> SKILLS
+                    </a>
+                </small>
+            </li>
+              <li class=""> 
+                <small>
+                  <span>03</span>
+                  <a aria-current="page" class="" href="#projects">
+                      <span class="menu_bullet"></span> PROJECTS
+                    </a>
+                </small>
+            </li>
+            <li class="">
+                <small>
+                    <span>04</span>
+                    <!-- <a target="_blank" rel="noopener noreferrer" href="#resume"> -->
+                    <a aria-current="page" class="" href="#resume">
+                    <span class="menu_bullet"></span> RESUME
+                  </a>
+                </small>
+              </li>
+            </ul>
+          </nav>
+          <div class="social-media">
+            <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="section-2">
+          <div id="home">
+            <h2>Home</h2>
+            <p>Hey everyone, my name is Łukasz and I'm a 3rd year Automation Control and Robotics student at AGH UST, Kraków.</p>
+            <p>I'm excited about recent, stunning advancements in the Machine Learning field. In general, I like to build things and automate stuff in the digital realm.</p>
+            <p>My priority has always been on getting things done. I don't pay much attention what tool I'm using, I care that it is the right tool.</p>
+            <p>Thank you for visiting my website.</p>
+          </div>
+          <div id="aboutme" class="hidden">
+            <h2>About me</h2>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <h3>In my free time</h3>
+            <p>PC gamer, currently at rest. Waiting an eternity for the GPU market to be fixed.</p>
+            <p>Reader. Not necessarily books, mostly online articles on geopolitics, tech, economy etc.</p>
+            <p>Cyberpunk aesthetic enjoyer.</p>
+            <p>Game / movie soundtracks humble consumer.</p>
+          </div>
+          <div id="skills" class="hidden">
+            <h2>Skills</h2>    
+            <p>Thinking, coding, solving problems. Don't lose sight of the bigger picture. But in specifics</p>
+            <p>Python.</p>
+            <p>C++</p>
+            <p>Basics of Git/Github.</p>
+            <p>proficiency at fast.ai / Pytorch</p>
+            <p></p>
+          </div>
+          <div id="projects" class="hidden">
+            <h2>Projects</h2>
+            <ul>
+                <a href="/home.html">
+                <li class="item">
+                    <img src="dummy.png" alt="Project Image">
+                    <div>
+                        <h3>Need for Speed Most Wanted self-driving car</h3>
+                        <p>Training a bot to play the game and stay on the road using the fastai/Pytorch machine learning frameworks.</p>
+                    </div>
+                </li>
+                </a>
+                <a href="/home.html">
+                  <li class="item">
+                    <img src="dummy.png" alt="Project Image">
+                    <div>
+                      <h3>Gantt chart web app based on the CPM algorithm</h3>
+                      <p>A bold attempt at creating a UI around a piece of Python code designed to schedule tasks in project management and draw a Gantt chart a.k.a. "I've never written a single line of JavaScript in my life and I'm gonna make it work regardless."</p>
+                    </div>
+                  </li>
+                </a>
+                <a href="/home.html">
+                <li class="item">
+                    <img src="dummy.png" alt="Project Image">
+                    <div>
+                        <h3>LEGO theme classifier</h3>
+                        <p>fast.ai deep learning course project. An app that classifies LEGO models (both official sets and fans' creations) into well-known, long-lasting LEGO themes. Deployed with a Gradio interface at HuggingFace Spaces.</p>
+                    </div>
+                  </li>
+                </a>
+                <a href="/home.html">
+                  <li class="item">
+                    <img src="dummy.png" alt="Project Image">
+                    <div>
+                      <h3>MNIST Classification in Factorio</h3>
+                        <p>Introductory project. Forward pass of a neural network built from scratch with an interactive input in a video game focused on automation. The weights come from a model trained using TensorFlow.</p>
+                    </div>
+                </li>
+              </a>
+              <a href="/home.html">
+              <li class="item">
+                  <img src="dummy.png" alt="Project Image">
+                  <div>
+                      <h3>Report copilot-wannabe</h3>
+                      <p>Experiments with fine-tuning a polish version of GPT-2 model on an ultra-small dataset (roughly 30 reports) using HuggingFace Transformers.</p>
+                  </div>
+              </li>
+              </a>
+                <a href="/home.html">
+                  <li class="item">
+                    <img src="dummy.png" alt="Project Image">
+                    <div>
+                        <h3>My personal website</h3>
+                        <p>You're looking at it! Here's the source code.</p>
+                    </div>
+                </li>
+                </a>
+            </ul>
+          </div>
+          <div id="resume" class="hidden">
+            <h2>Resume</h2>    
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quas sint et nihil iusto eius nostrum sit error, repellat optio quisquam! Magnam dolore iusto cumque. Nostrum error iste neque maiores.</p>
+          </div>
+        </div>
+    </div>
+      
+</body>
+</html>
