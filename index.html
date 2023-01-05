@@ -11,7 +11,7 @@
 
     <script>
         // Toggle text sections visibility
-        let sections = ["#home", "#aboutme", "#skills", "#projects", "#resume"];
+        let sections = ["#aboutme", "#skills", "#projects", "#resume"];
         function showOne(name) {
             $('a[href="' + name + '"]').click(function(e) {
                 $(sections.join(', ') ).addClass('hidden');
@@ -55,14 +55,6 @@
               <li class="selected">
                 <small>
                   <span>00</span>
-                  <a href="#home">
-                    <span class="menu_bullet"></span> HOME
-                  </a>
-                </small>
-              </li>
-              <li class="">
-                <small>
-                  <span>01</span>
                   <a href="#aboutme">
                     <span class="menu_bullet"></span> ABOUT ME
                   </a>
@@ -70,7 +62,7 @@
               </li>
               <li class=""> 
                 <small>
-                  <span>02</span>
+                  <span>01</span>
                   <a aria-current="page" class="" href="#skills">
                       <span class="menu_bullet"></span> SKILLS
                     </a>
@@ -78,7 +70,7 @@
             </li>
               <li class=""> 
                 <small>
-                  <span>03</span>
+                  <span>02</span>
                   <a aria-current="page" class="" href="#projects">
                       <span class="menu_bullet"></span> PROJECTS
                     </a>
@@ -86,7 +78,7 @@
             </li>
             <li class="">
                 <small>
-                    <span>04</span>
+                    <span>03</span>
                     <!-- <a target="_blank" rel="noopener noreferrer" href="#resume"> -->
                     <a aria-current="page" class="" href="#resume">
                     <span class="menu_bullet"></span> RESUME
@@ -103,15 +95,12 @@
         </div>
 
         <div class="section-2">
-          <div id="home">
-            <h2>Home</h2>
+          <div id="aboutme" >
+            <h2>About me</h2>
             <p>Hey everyone, my name is Łukasz and I'm a 3rd year Automation Control and Robotics student at AGH UST, Kraków.</p>
             <p>I'm excited about recent, stunning advancements in the Machine Learning field. In general, I like to build things and automate stuff in the digital realm.</p>
             <p>My priority has always been on getting things done. I don't pay much attention what tool I'm using, I care that it is the right tool.</p>
             <p>Thank you for visiting my website.</p>
-          </div>
-          <div id="aboutme" class="hidden">
-            <h2>About me</h2>
             <p></p>
             <p></p>
             <p></p>
