@@ -1,6 +1,11 @@
 /* global */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+:root {
+  --intermediate-row: 33;
+  --total-rows: 70;
+}
+
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -10,7 +15,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(21, 21, 21);
+    /* background-color: rgb(21, 21, 21); */
+    background-color: rgb(28, 28, 30);;
     color: #7A7C80;
     --xsmall-font: 0.7rem;
 
@@ -60,7 +66,7 @@ a{
     overflow-y: auto;
     height: 90vh;
     margin-right: 15%;
-    width: 70%;
+    width: 90%;
 }
 
 .section-2 h2{
@@ -100,7 +106,7 @@ a{
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: min-content;
 
-  width: calc(100% - 40px);
+  width: calc(100% - 60px);
   margin-left: 20px;
 }
 
@@ -209,7 +215,7 @@ nav, nav ul {
 
 ul {
     display: block;
-    list-style-type: disc;
+    list-style-type: none;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -274,14 +280,17 @@ nav ul li.selected a .menu_bullet {
 
 /* project items */
 
+li::marker {
+  display: none;
+}
+
 .item {
     display: grid;
-    /* grid-template-columns: minmax(150px, 1fr) 2.5fr; */
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto; /* set the height of the rows to auto */
-    grid-gap: 10px;
-    background-color: #1d1d1f;
-    margin: 20px;
+    grid-template-columns: repeat(var(--total-rows), 1fr);
+    grid-gap: 10px; 
+    align-items: center;
+    /* background-color: #1d1d1f; */
+    margin: 30px;
     
     transition: transform 0.15s linear;
   }
@@ -291,28 +300,63 @@ nav ul li.selected a .menu_bullet {
       grid-template-columns: 1fr; 
     }
   } */
+
+  /* .item:nth-of-type(even) img {
+    grid-column: 1 / 8;
+  }
+  .item:nth-of-type(even) div {
+    grid-column: 7 / -1;
+  } */
+   /* #projects > ul > a > li.item:nth-of-type(1) {
+     background-color: red;
+    } */
   
   .item img {
-    width: 90%;
-    grid-column: 1; /* select the first (left) column */
-    justify-self: center; /* center the image horizontally */
-    align-self: center; /* center the image vertically */
-    padding: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 100%;
+    grid-area: 1 / calc(var(--intermediate-row) - 1) / -1 / -1;
   }
   
   .item div {
-    padding: 5%;
-    padding-left: 0;
+    grid-area: 1 / 1 / -1 / calc(var(--intermediate-row) + 1);
+    padding: 10%;
+    padding-right: 3%;
     display: flex;
     flex-direction: column;
+    background-image: url(img/bg3.svg);
+    /* background-image: url(img/Untitled\ \(6\).svg); */
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  .item div h3 {
+    padding-bottom: 3%;
+  }
+  .item div p{
+    padding-bottom: 0 !important;
+    /* margin: 0; */
+    /* padding-left: 5%;
+    padding-right: 5%; */
+  }
+  /* .item div h3::before{
+    content: url(img/top-line.svg);
+    display: block;
+    overflow: hidden;
+  } */
   
   .item h3 {
     margin: 0;
   }
   
+.item-mirror img {
+  grid-area: 1 / 1 / -1 / calc(calc(var(--total-rows) - var(--intermediate-row)) + 1);
+}
+.item-mirror div {
+  grid-area: 1 / calc(calc(var(--total-rows) - var(--intermediate-row)) - 1) / -1 / -1;;
+  background-position: top right;
+  padding-left: 3%;
+  padding-right: 10%;
+}
+
 .item-grid {
   margin: 0;
   display: flex;
@@ -322,6 +366,8 @@ nav ul li.selected a .menu_bullet {
 
   background-color: #1d1d1f;
   transition: transform 0.15s linear;
+
+  /* border: 1px solid white; */
 
   /* display: grid; */
   /* grid-template-rows: 1fr 2fr; */
