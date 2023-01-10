@@ -314,6 +314,8 @@ li::marker {
   .item img {
     width: 100%;
     grid-area: 1 / calc(var(--intermediate-row) - 1) / -1 / -1;
+    padding: 10%;
+    padding-left: 0;
   }
   
   .item div {
@@ -349,6 +351,8 @@ li::marker {
   
 .item-mirror img {
   grid-area: 1 / 1 / -1 / calc(calc(var(--total-rows) - var(--intermediate-row)) + 1);
+  padding: 10%;
+  padding-right: 0;
 }
 .item-mirror div {
   grid-area: 1 / calc(calc(var(--total-rows) - var(--intermediate-row)) - 1) / -1 / -1;;
@@ -365,6 +369,7 @@ li::marker {
   height: 100%;
 
   background-color: #1d1d1f;
+  background-color: rgb(6, 6, 7);
   transition: transform 0.15s linear;
 
   /* border: 1px solid white; */
@@ -378,10 +383,11 @@ li::marker {
 }
   .item-grid img {
     /* margin: auto; */
-    /* width: 90%; */
+    width: 90%;
     height: 100%;
     height: 150px;
     padding-bottom: 0;
+    padding-top: 5%;
   }
   .item-grid h3 {
     
