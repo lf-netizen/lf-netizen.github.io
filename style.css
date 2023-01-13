@@ -313,13 +313,13 @@ li::marker {
   
   .item img {
     width: 100%;
-    grid-area: 1 / calc(var(--intermediate-row) - 1) / -1 / -1;
+    grid-area: 1 / calc(var(--intermediate-row) - 1) / -1 / -3;
     padding: 10%;
     padding-left: 0;
   }
   
   .item div {
-    grid-area: 1 / 1 / -1 / calc(var(--intermediate-row) + 1);
+    grid-area: 1 / 3 / -1 / calc(var(--intermediate-row) + 1);
     padding: 10%;
     padding-right: 3%;
     display: flex;
@@ -415,3 +415,15 @@ li::marker {
     background-color: #444;
   } */
   
+
+  /* data-augmented-ui="tl-clip t-clip-x br-scoop-x bl-2-clip-x border" */
+.item-border {
+  background-color: #fcee0a;
+  --aug-border-all: 9px;
+  --aug-border-bg: black;
+  --aug-t-extend1: 40%;
+  --aug-tl1-width: 20px;
+  --aug-tl1-height: 20px;
+  --aug-bl-extend1: 10%;
+}
+
