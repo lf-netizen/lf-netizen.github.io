@@ -172,6 +172,7 @@ a{
 
     --aug-br-inset2: 50%;
     --aug-br1-width:  2vw;
+    --aug-br1-width:  25px;
     --aug-br1-height: 7vh;
     --aug-br: 5%;
 
@@ -191,6 +192,23 @@ a{
     
 
     
+  }
+  .section-split {
+    width: 3vh;
+    height: 100vh;
+
+    --aug-br-inset2: 50%;
+    --aug-br1-width:  2vw;
+    --aug-br1-width:  20px;
+    --aug-br1-height: 7vh;
+    --aug-br: 5%;
+
+    --aug-inlay-all: 0px;
+    --aug-inlay-bg: rgb(6, 6, 7);
+    
+    --aug-border-all: 0px;
+    --aug-border-right: 10px;
+    --aug-border-bg: #fcee0a;
   }
   
   .section-1.flex-column .top {
@@ -571,6 +589,7 @@ li::marker {
     /* background: linear-gradient(#ff003c, #00f0ff); */
     background: rgb(6, 6, 7);
     background: #31d4ed;
+    background: linear-gradient(135deg, #86eaf9, #11dfff);
   --aug-inlay-opacity: 1;
 
   --aug-l-extend1: 50%;
@@ -598,10 +617,23 @@ li::marker {
     /* padding-bottom: 0;
     padding-top: 20%; */
   }
+  .skills-item:hover img{
+    display: none;
+    /* opacity: 0.2;
+    z-index: -1; */
+  }
   .skills-item h3 {
-    
+    display: none;
   }
   .skills-item div {
+    display: none;
+  }
+  .skills-item:hover h3{
+    display: block;
+    
+  }
+  .skills-item:hover div {
+    display: block;
     margin: 5%;
     margin-top: 0;
     margin-bottom: 0;
