@@ -393,28 +393,40 @@ li::marker {
     padding-left: 0;
   }
   
-  .item div {
+  .item-description {
     grid-area: 1 / 5 / -1 / calc(var(--intermediate-row) + 1);
     padding: 10%;
     padding-right: 3%;
     display: flex;
     flex-direction: column;
     background-image: url(img/bg3.svg);
-    /* background-image: url(img/Untitled\ \(6\).svg); */
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .item div h3 {
+  .item-bg {
+    grid-area: 1 / 5 / -1 / calc(var(--intermediate-row) + 1);
+    /* background-color: #fcee0a; */
+    background: linear-gradient(0.25turn, black, #fcee0a 45%, #fcee0a 55%,  black);
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100% !important;
+    width: 120% !important;
+    justify-self: center !important;
+    z-index: -1 !important;
+  }
+
+
+  .item-description h3 {
     padding-bottom: 3%;
   }
-  .item div p{
+  .item-description p{
     padding-bottom: 0 !important;
     /* margin: 0; */
     /* padding-left: 5%;
     padding-right: 5%; */
   }
-  /* .item div h3::before{
+  /* .item-description h3::before{
     content: url(img/top-line.svg);
     display: block;
     overflow: hidden;
@@ -433,16 +445,19 @@ li::marker {
 }
 
   .item-mirror img {
-  grid-area: 1 / 1 / -1 / calc(calc(var(--total-rows) - var(--intermediate-row)) + 1);
-  padding: 8%;
-  padding-left: 8%;
-}
-.item-mirror div {
-  grid-area: 1 / calc(calc(var(--total-rows) - var(--intermediate-row)) - 1) / -1 / -4;
-  background-position: top right;
-  padding-left: 3%;
-  padding-right: 10%;
-}
+    grid-area: 1 / 1 / -1 / calc(calc(var(--total-rows) - var(--intermediate-row)) + 1);
+    padding: 8%;
+    padding-left: 8%;
+  }
+  .item-mirror div {
+    grid-area: 1 / calc(calc(var(--total-rows) - var(--intermediate-row)) - 1) / -1 / -4;
+    background-position: top right;
+    padding-left: 3%;
+    padding-right: 10%;
+  }
+  .item-mirror .item-bg {
+    grid-area: 1 / calc(calc(var(--total-rows) - var(--intermediate-row)) - 1) / -1 / -4; 
+  }
 
 .item-grid {
   margin: 0;
@@ -633,8 +648,6 @@ li::marker {
   --aug-tl1: 60px;
   --aug-bl1: 60px; */
 }
-
-
 .skills-item{
   margin: 0;
   display: flex;
