@@ -155,8 +155,9 @@ a{
   gap: 2.5em;
   /* column-gap: 0; */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: min-content;
+  gap: 0;
 }
 
 /* animations / utilities */
@@ -502,48 +503,76 @@ li::marker {
     grid-area: 1 / calc(calc(var(--total-rows) - var(--intermediate-row)) - 1) / -1 / -4; 
   }
 
+.projects-grid-container {
+  position: relative;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;    
+  
+}
+
+
+.projects-grid {
+  position: relative;
+  display: grid;
+  /* row-gap: 0;
+  column-gap: 2em; */
+  gap: 2em;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: min-content;
+  margin-right: 0.5fr;
+}
+
 .item-grid {
   margin: 0;
   display: grid;
-  grid-template-rows: 1.5fr 1fr;
-  align-items: center;
-  justify-content: center;
+   
+  grid-template-rows: 3fr 1fr 2fr;
+  grid-gap: 10px;
   height: 100%;
-  background: linear-gradient(0.25turn, var(--black), var(--yellow),  var(--black));
 
+  background: linear-gradient(90deg, var(--black) 30%, var(--yellow), var(--black) 60%);
+   
 
-  }
+   /* align-items: center; */
+}
   .item-grid img {
-    margin: auto;
+    /* margin: auto; */
     /* width: 100%; */
     /* height: 100%; */
-    width: 90%;
-    /* height: 100%; */
-    object-fit: cover;
     object-fit: contain;
-    aspect-ratio: 3/2;
-    /* justify-self: top; */
-    
-
-    
-    
+    height: 180px;
+    /* width: 70%; */
     padding: 0;
+    margin-left: 40%;
 
+    grid-row: 1 / 3;
+    grid-column: 1 / -1;
+    z-index: 1;
+    justify-self: start;
+    
 
     filter: grayscale(100%);
   }
   .item-grid div {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1.68/1;
     margin: 0;
-    /* padding: 2%; */
-    /* transition-duration: 0.3s;
+    transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(1, 0.9, 0.7, 0.3);
-    transition-timing-function: ease-out; */
+    transition-timing-function: ease-out;
     
-    justify-self: end;
-
+    grid-column: 1 / -1;
+    height: 100%;
+    width: 50%;
+    /* aspect-ratio: 2/1; */
+    justify-self: start;
+    
+    grid-row: 2 / -1;
+    /* height: 40%; */
+    align-self: end;
 
     --aug-tl1: 30px;
     --aug-border-bg: white;
@@ -553,10 +582,10 @@ li::marker {
   }
   .item-grid div h3 {
     margin: 10%;
-    /* margin-top: calc(10% + 10px); */
+    margin-top: calc(10% + 10px);
   }
   
-.item:hover .item-bg{ 
+.item:hover .item-bg{
   /* transform: scale(1.05); */
   background: linear-gradient(0.25turn, var(--black), #fcee0a 15%, #fcee0a 75%,  var(--black));
   background: linear-gradient(0.25turn, var(--black), var(--yellow) 15%, var(--yellow) 75%,  var(--black));
@@ -676,11 +705,11 @@ li::marker {
 }
 
   .skills-item-neon {
-    position: absolute;
-    left: 0px;
+    /* position: absolute;
+    left: 0px; */
     /* bottom: 22.29%; */
-    height: 68.75%;
-    width: 48.55%;
+    /* height: 68.75%;
+    width: 48.55%; */
 
     align-self: center;
     justify-self: center;
@@ -717,6 +746,25 @@ li::marker {
     --aug-inlay-all: 0px;
     --aug-inlay-bg: var(--almaz-color);
     --aug-inlay-opacity: 0.125;
+  }
+  .almaz {
+    /* position: relative;
+    display: block; */
+    /* --almaz-width: 1028px; */
+    /* --almaz-hover-animation: 4s; */
+    
+    
+    --almaz-width: min(60vw, 90vh * 2.1416667); /* change this to scale the whole logo */
+    /* --almaz-width: 100%; change this to scale the whole logo */
+    width: var(--almaz-width);
+    height: calc(var(--almaz-width) / 2.1416667);
+    
+    --almaz-color: #2acefb;
+    --almaz-glow-size: calc(var(--almaz-width) * 0.048638132);
+    
+    filter: drop-shadow(0 0 var(--almaz-glow-size) #2acefb) drop-shadow(0 0 var(--almaz-glow-size) #2acefb);
+    /* --almaz-extend: calc(var(--almaz-width) * 0.0428015564); */
+    /* --almaz-clip: calc(var(--almaz-width) * 0.0223735409); */
   }
 
 
