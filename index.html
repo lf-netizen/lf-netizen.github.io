@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
         // Toggle text sections visibility
         let sections = ["#aboutme", "#skills", "#projects", "#resume"];
+        // let colors = ["--white", "--blue", "--yellow", "--white"];
+        // var r = document.querySelector(':root');
+
         function showOne(name) {
             $('a[href="' + name + '"]').click(function(e) {
                 $(sections.join(', ') ).addClass('hidden');
                 $(name).removeClass('hidden');
+                // r.style.setProperty('--theme-color', `var(${colors[sections.indexOf(name)]})`);
                 e.preventDefault()
             });
         }
@@ -104,13 +112,14 @@
             <div class="aboutme-description-container">
               <div class="text-border" data-augmented-ui="bl-clip tr-clip br-clip-x border">
                 <div data-augmented-ui="tr-clip">
-                  
-                  <p>adsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasd
-                    adsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasdadsjhasd
-                    sadas 
-                    asddas
-                  </p>
 
+                  <p>I'm a 3rd year student of Automatics and Robotics at the faculty of Electrical Engineering, Automatics, Computer Science and Biomedical Engineering at the AGH University of Science and Technology in Cracow. 
+                  </p>
+                  <p> I'm excited about recent, stunning advancements in the Machine Learning field. In general, I like to build things and automate stuff in the digital realm.
+                      My priority has always been on getting things done. I don't pay much attention what tool I'm using, I care that it is the right tool.
+                  </p>
+                  <p>Thank you for visiting my website.</p>
+                  
                 </div>
               </div>
               <div class="border-clip" data-augmented-ui="tl-clip tr-clip border"></div>
@@ -123,7 +132,6 @@
             <p>Hey everyone, my name is Łukasz and I'm a 3rd year Automation Control and Robotics student at AGH UST, Kraków.</p>
             <p>I'm excited about recent, stunning advancements in the Machine Learning field. In general, I like to build things and automate stuff in the digital realm.</p>
             <p>My priority has always been on getting things done. I don't pay much attention what tool I'm using, I care that it is the right tool.</p>
-            <p>Thank you for visiting my website.</p>
             <p></p>
             <p></p>
             <p></p>
@@ -142,67 +150,86 @@
             <!-- <p style="text-align: left;">thinking</p>
             <p style="text-align: center;">coding</p>
             <p style="text-align: right;">solving</p> -->
-            <div class="almaz">
-              <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round"></div>
+            <!-- <div class="neon-wrapper">
+              <div class="skills-item-neon" data-augmented-ui="tr-clip-x clip-x blip-x blip-x"></div>
+            </div> -->
+
+            <div id="suptitle-skills">CORE SKILLS</div>
+            <div class="skills-header">
+              <div data-augmented-ui="bl-clip border">PROBLEM SOLVING</div>
+              <div data-augmented-ui="border">CODING</div>
+              <div data-augmented-ui="tr-clip border">CREATIVITY</div>
             </div>
+
             <div class="skills-grid-container">
+              <!-- <div id="suptitle-technologies">TECHNO                        LOGIES</div> -->
+              <div id="suptitle-technologies">TECHNOLOGIES</div>
+              <div id="skills-decor" data-augmented-ui="all-hexangle-up border"></div>
               <div class="skills-grid-background"></div>
               <div class="skills-grid">
-                <div class="almaz">
-                  <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round"></div>
-                </div>
-
-                <!-- <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
-                  <img src="img/python_bw.png" alt="Project Image">
-                  <div>
-                      <h3>roiweopriqwe</h3>
-                      <p>dasdashjk</p>
+                <div class="neon-wrapper">
+                  <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
+                    <img src="img/python_bw.png" alt="Project Image">
+                    <!-- <div>
+                        <h3>roiweopriqwe</h3>
+                        <p>dasdashjk</p>
+                    </div> -->
                   </div>
-                </div> -->
-                <div class="skills-item" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round border">
-                  <img src="img/cpp_bw.png" alt="Project Image">
-                  <!-- <div>
-                      <h3>roiweopriqwe</h3>
-                      <p>dasdashjk</p>
-                  </div> -->
-
                 </div>
-                <div class="skills-item" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round border">
-                  <img src="img/git_bw.png" alt="Project Image">
-                  <!-- <div>
-                      <h3>roiweopriqwe</h3>
-                      <p>dasdashjk</p>
-                  </div> -->
-
-                </div>
-
-                <div class="skills-item" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round border">
-                  <img src="dummy.png" alt="Project Image">
-                  <div>
-                      <h3>roiweopriqwe</h3>
-                      <p>dasdashjk</p>
+                <div class="neon-wrapper">
+                  <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
+                    <img src="img/cpp_bw.png" alt="Project Image">
+                    <!-- <div>
+                        <h3>roiweopriqwe</h3>
+                        <p>dasdashjk</p>
+                    </div> -->
                   </div>
-
                 </div>
+                <div class="neon-wrapper">
+                  <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
+                    <img src="img/git_bw.png" alt="Project Image">
+                    <!-- <div>
+                        <h3>roiweopriqwe</h3>
+                        <p>dasdashjk</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="neon-wrapper">
+                  <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
+                    <img src="img/pytorch_bw.png" alt="Project Image">
+                    <!-- <div>
+                        <h3>roiweopriqwe</h3>
+                        <p>dasdashjk</p>
+                    </div> -->
+                  </div>
+                </div>
+                <div class="neon-wrapper">
+                  <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
+                    <img src="img/matlab_bw.png" alt="Project Image">
+                    <h3>roiweopriqwe</h3>
+                    <!-- <div>
+                        <p>dasdashjk</p>
+                    </div> -->
+                  </div>
+                </div>
+
+                <div class="flex-break"></div>
+
+                <div class="neon-wrapper">
+                  <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
+                    <img src="dummy.png" alt="Project Image">
+                    <!-- <div>
+                        <h3>roiweopriqwe</h3>
+                        <p>dasdashjk</p>
+                    </div> -->
+                  </div>
+                </div>                
 
               </div>
             </div>
+            <div id="suptitle-skills-names"><i>PYTHON / C++ / GIT / PYTORCH / MATLAB</i></div>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+           
             <!-- <h2>Skills</h2>    
             <p>Thinking, coding, solving problems. Don't lose sight of the bigger picture. But in specifics</p>
             <p>Python.</p>
@@ -263,6 +290,14 @@
                           <!-- <p>Introductory project. Forward pass of a neural network built from scratch with an interactive input in a video game focused on automation.</p> -->
                         </div>
                     </li>
+                  </a>
+                  <a href="/home.html">
+                  <li class="item-grid">
+                      <img src="img/network.png" alt="Project Image">
+                      <div data-augmented-ui="tl-clip border">
+                          <h3>Network optimization with SA algorithm</h3>
+                      </div>
+                  </li>
                   </a>
                   <a href="/home.html">
                   <li class="item-grid">
