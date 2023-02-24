@@ -495,51 +495,82 @@ li::marker {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-  column-gap: 0;
+  grid-gap: 50px;
+  /* column-gap: 0; */
 }
 
 .item-grid {
   margin: 0;
   display: grid;
    
-  grid-template-columns: 0.5fr 1fr 2fr;
+  grid-template-columns: 1fr 0.2fr 3fr;
   grid-template-rows: 1fr;
   grid-gap: 20px;
   width: 100%;
   height: 100%;
+
+  transition: linear 0.5s;
   /* height: 200px; */
 
   /* aspect-ratio: 6/2; */
 
-  background: linear-gradient(0deg, var(--black) 5%, var(--yellow), var(--black) 95%);
-  
+  /* background: linear-gradient(0deg, var(--black) 5%, var(--yellow), var(--black) 95%); */
    /* align-items: center; */
 }
 /* .projects-grid a:nth-child(even) {
   margin-left: 10%;
 } */
-.item-grid .item-image-container {
+.item-grid:hover .item-image-container{
+  --aug-inlay-opacity: 1;
+}
+
+:root {
+  --neon-yellow: #fcee0a;
+  /* --yellow:var(--neon-yellow); */
+  --neon-yellow: var(--yellow);
+}
+.item-neon-wrapper {
   grid-column: 2 / -1;
     grid-row: 1 / -1;
-    height: 80%;
+    height: 90%;
     width: 100%;
-    /* background-color: var(--yellow); */
     align-self: center;
     display: flex;
-    /* align-items: end; */
     justify-content: end;
+    filter: drop-shadow(0 0 var(--glow-size) var(--neon-yellow)) drop-shadow(0 0 var(--glow-size) var(--neon-yellow));
+    /* filter: drop-shadow(0 0 var(--glow-size) var(--neon-yellow)); */
+  }
+  .item-grid .item-image-container {
+    width: 100%;  
+    height: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--yellow); */
+    --aug-bl-inset2: 70%;
+    --aug-bl1-height: 10%;
     --glow-size: 22px;
 
-    filter: drop-shadow(0 0 var(--glow-size) var(--yellow)) drop-shadow(0 0 var(--glow-size) var(--yellow));
-    filter: drop-shadow(0 0 var(--glow-size) var(--yellow));
+    /* filter: drop-shadow(0 0 var(--glow-size) var(--yellow)) drop-shadow(0 0 var(--glow-size) var(--yellow));
+    filter: drop-shadow(0 0 var(--glow-size) var(--yellow)); */
     
+    --aug-border: initial;
+    --aug-border-bg: var(--neon-yellow);
+    /* --aug-border-all: calc(var(--almaz-width) / 400); */
+    --aug-border-all: 0px;
+    --aug-inlay: initial;
+    --aug-inlay-all: 0px;
+    --aug-inlay-bg: var(--neon-yellow);
+      /* --aug-inlay-opacity: 0.125; */
+      --aug-inlay-opacity: 0.5;
+      
   }
   .item-grid img {
     height: 90%;
     max-height: 220px;
-    width: 70%;
-    /* max-width: 80%; */
+    /* width: 70%; */
+    max-width: 70%;
     object-fit: contain;
     /* max-width: 90%;
     max-height: 90%;
@@ -548,6 +579,8 @@ li::marker {
     object-fit: contain; */
   
     padding: 10px;
+    padding-right: 25px;
+    padding-bottom: calc(10px + 10%);
     /* margin-left: auto; */
     /* float: right; */
     
@@ -565,10 +598,13 @@ li::marker {
     grid-row: 1 / -1;
     width: 100%;
     height: 100%;
+    /* aspect-ratio: 1 / 1; */
 
-    --aug-br1-width:  25%;
-    --aug-br1-height: 100%;
+    /* --aug-br1-width:  25%;
+    --aug-br1-height: 100%; */
     /* --aug-br2: 10px; */
+    --aug-br1-height: 10%;
+    --aug-br-inset1: 50%;
     --aug-border-bg: white;
     --aug-border-all: 2px;
     
@@ -694,7 +730,7 @@ li::marker {
   font-family: 'Chakra Petch', sans-serif;
   font-size: 1.3em;
 
-  opacity: 0.3;
+  opacity: 0.5;
   
   width: min(80%, 900px);
   margin: 0 auto;
