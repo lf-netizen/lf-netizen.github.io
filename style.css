@@ -1032,3 +1032,10 @@ li::marker {
     
     background-color: var(--black);
   }
+
+  .me-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+  }
