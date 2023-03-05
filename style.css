@@ -985,6 +985,78 @@ li::marker {
     padding: 2%;
   }
 
+  .aboutme {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .aboutme-grid {
+    position: relative;
+    width: 80%;
+  
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;    
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    align-items: center;
+  }
+
+  .aboutme-grid img {
+    width: 80%;
+    object-fit: contain;
+  }
+
+  .aboutme-points-container {
+
+  }
+  .aboutme-points-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .aboutme-points-item p {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.4em;
+    padding: 0;
+  }
+  .points-item-decor {
+    --aug-all-width: 3em;
+    --reticle-color: var(--white);
+    --reticle-size: calc(var(--aug-all-width) * 0.25);
+  
+    --aug-border-bg: radial-gradient(
+      circle at top center,
+      var(--reticle-color) var(--reticle-size),
+      transparent var(--reticle-size)
+    ), radial-gradient(
+      circle at bottom 13.92% right 6.89%,
+      var(--reticle-color) var(--reticle-size),
+      transparent var(--reticle-size)
+    ), radial-gradient(
+      circle at bottom 13.92% left 6.89%,
+      var(--reticle-color) var(--reticle-size),
+      transparent var(--reticle-size)
+    );
+    background: radial-gradient(
+      circle at 50% 56%,
+      var(--reticle-color) 0.25rem,
+      transparent 0.25rem
+    );
+    transform: rotate(180deg);
+    opacity: 1;
+   
+  }
+
   .aboutme-description-container {
     position: relative;
     width: 80%;
@@ -993,6 +1065,7 @@ li::marker {
     margin-right: auto;
     left: 0;
     right: 0;    
+    margin-top: 10%;
   }
 
   .text-border {    
