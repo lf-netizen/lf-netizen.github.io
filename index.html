@@ -14,6 +14,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@100&display=swap&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+
     <script>
         // Toggle text sections visibility
         let sections = ["#aboutme", "#skills", "#projects", "#resume"];
@@ -54,11 +58,10 @@
         data-augmented-ui="br-clip-y both"
         >
           <div class="top">
-            <i class="fas fa-code fa-5x white"></i>
+            <!-- <i class="fas fa-code fa-5x white"></i> -->
             <!-- <img src="dummy.png" alt="Project Image"> -->
             <!-- <h2>Łukasz Faruga</h2> -->
-            <p>Kraków, Poland.</p>
-            <p></p>
+            <b><p class="name">Łukasz Faruga</p></b>
             <p>lukasz.faruga1@gmail.com</p>
           </div>
           <nav class="">
@@ -110,7 +113,7 @@
           <div class="aboutme">
 
             <div class="aboutme-grid">
-              <img src="dummy.png">
+              <img src="img/portraitattempt.png">
               <div class="aboutme-points-container">
                 <div class="aboutme-points-item">
                   <div class="points-item-decor" data-augmented-ui="all-hexangle-up border"></div>
@@ -118,11 +121,11 @@
                 </div>
                 <div class="aboutme-points-item">
                   <div class="points-item-decor" data-augmented-ui="all-hexangle-up border"></div>
-                  <p>Kraków, Poland</p>
+                  <p>3rd year student of Automatics and Robotics</p>
                 </div>
                 <div class="aboutme-points-item">
                   <div class="points-item-decor" data-augmented-ui="all-hexangle-up border"></div>
-                  <p>3rd year student of Automatics and Robotics at AGH UST</p>
+                  <p>AGH UST - Kraków, Poland</p>
                 </div>
               </div>
 
@@ -131,11 +134,8 @@
             <div class="aboutme-description-container">
               <div class="text-border" data-augmented-ui="bl-clip tr-clip br-clip-x border">
                 <div data-augmented-ui="tr-clip">
-
-                  <p> I'm excited about recent, stunning advancements in the Machine Learning field. In general, I like to build things and automate stuff in the digital realm.
-                      My priority has always been on getting things done. I don't pay much attention what tool I'm using, I care that it is the right tool.
-                  </p>
-                  <p>Thank you for visiting my website.</p>
+                  <p>ML enthusiast. Not afraid of making things work. I build interesting stuff in the digital realm. Always trying to keep my creativity alive.</p>
+                  <p>Thank you for stopping by.</p>
                   
                 </div>
               </div>
@@ -143,35 +143,9 @@
               <div class="border-clip" data-augmented-ui="bl-clip br-clip border"></div>
             </div>
 
-
-
-            <!-- <h2>About me</h2>
-            <p>Hey everyone, my name is Łukasz and I'm a 3rd year Automation Control and Robotics student at AGH UST, Kraków.</p>
-            <p>I'm excited about recent, stunning advancements in the Machine Learning field. In general, I like to build things and automate stuff in the digital realm.</p>
-            <p>My priority has always been on getting things done. I don't pay much attention what tool I'm using, I care that it is the right tool.</p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <h3>In my free time</h3>
-            <p>PC gamer, currently at rest. Waiting an eternity for the GPU market to be fixed.</p>
-            <p>Reader. Not necessarily books, mostly online articles on geopolitics, tech, economy etc.</p>
-            <p>Cyberpunk aesthetic enjoyer.</p>
-            <p>Game / movie soundtracks humble consumer.</p> -->
           </div>
           </div>
           <div id="skills" class="hidden">
-            <!-- <div class="section-header" data-augmented-ui="bl-clip tr-clip">fasjdhfkljh</div> -->
-
-            <!-- width="500.000000pt" height="400.000000pt" viewBox="0 0 760.000000 400.000000" -->
-
-            <!-- <p style="text-align: left;">thinking</p>
-            <p style="text-align: center;">coding</p>
-            <p style="text-align: right;">solving</p> -->
-            <!-- <div class="neon-wrapper">
-              <div class="skills-item-neon" data-augmented-ui="tr-clip-x clip-x blip-x blip-x"></div>
-            </div> -->
-
             <div id="suptitle-skills">CORE SKILLS</div>
             <div class="skills-header">
               <div data-augmented-ui="bl-clip border">PROBLEM SOLVING</div>
@@ -180,7 +154,6 @@
             </div>
 
             <div class="skills-grid-container">
-              <!-- <div id="suptitle-technologies">TECHNO                        LOGIES</div> -->
               <div id="suptitle-technologies">TECHNOLOGIES</div>
               <div id="skills-decor" data-augmented-ui="all-hexangle-up border"></div>
               <div class="skills-grid-background"></div>
@@ -188,46 +161,26 @@
                 <div class="neon-wrapper">
                   <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
                     <img src="img/python_bw.png" alt="Project Image">
-                    <!-- <div>
-                        <h3>roiweopriqwe</h3>
-                        <p>dasdashjk</p>
-                    </div> -->
                   </div>
                 </div>
                 <div class="neon-wrapper">
                   <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
                     <img src="img/cpp_bw.png" alt="Project Image">
-                    <!-- <div>
-                        <h3>roiweopriqwe</h3>
-                        <p>dasdashjk</p>
-                    </div> -->
                   </div>
                 </div>
                 <div class="neon-wrapper">
                   <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
                     <img src="img/git_bw.png" alt="Project Image">
-                    <!-- <div>
-                        <h3>roiweopriqwe</h3>
-                        <p>dasdashjk</p>
-                    </div> -->
                   </div>
                 </div>
                 <div class="neon-wrapper">
                   <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
                     <img src="img/pytorch_bw.png" alt="Project Image">
-                    <!-- <div>
-                        <h3>roiweopriqwe</h3>
-                        <p>dasdashjk</p>
-                    </div> -->
                   </div>
                 </div>
                 <div class="neon-wrapper">
                   <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
                     <img src="img/matlab_bw.png" alt="Project Image">
-                    <!-- <h3>roiweopriqwe</h3> -->
-                    <!-- <div>
-                        <p>dasdashjk</p>
-                    </div> -->
                   </div>
                 </div>
 
@@ -236,10 +189,6 @@
                 <div class="neon-wrapper">
                   <div class="skills-item-neon" data-augmented-ui="tr-clip-x b-clip-x l-clip-y bl-clip br-round">
                     <img src="img/msoffice_bw_rect.png" alt="Project Image">
-                    <!-- <div>
-                        <h3>roiweopriqwe</h3>
-                        <p>dasdashjk</p>
-                    </div> -->
                   </div>
                 </div>                
 
@@ -247,17 +196,8 @@
             </div>
             <div id="suptitle-skills-names"><i>PYTHON / C++ / GIT / PYTORCH / MATLAB / MS OFFICE</i></div>
             
-           
-            <!-- <h2>Skills</h2>    
-            <p>Thinking, coding, solving problems. Don't lose sight of the bigger picture. But in specifics</p>
-            <p>Python.</p>
-            <p>C++</p>
-            <p>Basics of Git/Github.</p>
-            <p>proficiency at fast.ai / Pytorch</p>
-            <p></p> -->
           </div>
           <div id="projects" class="hidden">
-            <!-- <h2>Projects</h2> -->
             <ul>
                 <a href="/home.html">
                   <!-- <li class="item item-border" data-augmented-ui="tl-round t-clip-x tr-round r-clip-y br-round b-clip-x bl-round l-clip-y border"> -->
@@ -330,7 +270,6 @@
                         </div>
                         <div class="item-title-container" data-augmented-ui="tr-clip-x l-clip-y border">
                           <h3>Report copilot-wannabe</h3>
-                          <!-- <p>Introductory project. Forward pass of a neural network built from scratch with an interactive input in a video game focused on automation.</p> -->
                         </div>
                     </li>
                   </a>
@@ -355,7 +294,6 @@
                         </div>
                         <div class="item-title-container" data-augmented-ui="tr-clip-x l-clip-y border">
                           <h3>My website</h3>
-                          <!-- <p>Introductory project. Forward pass of a neural network built from scratch with an interactive input in a video game focused on automation.</p> -->
                         </div>
                     </li>
                   </a>

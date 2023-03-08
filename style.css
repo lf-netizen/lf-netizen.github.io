@@ -228,7 +228,12 @@ a{
     padding-top: 10%;
     order: 1;
   }
-  
+
+  .top .name {
+    font-size: 3em;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
   nav {
     order: 2;
   }
@@ -438,8 +443,11 @@ li::marker {
 
   .item-description h3 {
     padding-bottom: 3%;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 28px;
   }
   .item-description p{
+    font-family: 'Chakra Petch', sans-serif;
     padding-bottom: 0 !important;
     /* margin: 0; */
     /* padding-left: 5%;
@@ -675,6 +683,8 @@ li::marker {
     margin: 10%;
     margin-left: 15%;
     /* margin-top: calc(10% + 10px); */
+
+    font-family: 'Rajdhani', sans-serif;
   }
 
 /* scrollbar */
@@ -986,6 +996,9 @@ li::marker {
   }
 
   .aboutme {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -994,7 +1007,7 @@ li::marker {
 
   .aboutme-grid {
     position: relative;
-    width: 80%;
+    width: 100%;
   
     margin-left: auto;
     margin-right: auto;
@@ -1002,13 +1015,17 @@ li::marker {
     right: 0;    
     
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.68fr 1fr;
     grid-template-rows: min-content;
     align-items: center;
   }
 
   .aboutme-grid img {
-    width: 80%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     object-fit: contain;
   }
 
@@ -1059,15 +1076,18 @@ li::marker {
 
   .aboutme-description-container {
     position: relative;
-    width: 80%;
-
+    width: 100%;
+    
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;    
-    margin-top: 10%;
+    margin-top: 5%;
   }
-
+  .aboutme-description-container div{
+    /* aspect-ratio: 5/1; */
+  }
+  
   .text-border {    
     background: var(--white);
     --aug-border-all: 1px;
