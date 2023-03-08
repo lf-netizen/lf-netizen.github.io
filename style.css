@@ -1132,3 +1132,9 @@ li::marker {
     margin-right: auto;
     height: 50vh;
   }
+
+  @media only screen and (max-width: 1500px) {
+    .item-description p{
+      display: none;
+    }
+  }
